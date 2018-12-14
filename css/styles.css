@@ -1,0 +1,117 @@
+/* WIDGET */
+.cch_widget_button{
+	height: 24px;
+	width: 200px;
+	background: #FFF;
+	border: 1px solid #ddd;
+	margin: 5px;
+}
+.cch_widget_button:hover{
+	cursor: pointer;
+}
+.cch_widget_button > span{
+	font-size: 12px;
+	color: #474747;
+}
+.cch_widget_button:hover > span{
+	color: #C6001E;
+}
+.cch_widget_button:active > span{
+	color: #982B11;
+}
+/* SHOW VIEWS */
+.cch_view_background{
+	opacity: 0.7;
+	position: absolute;
+	z-index: 999997;
+	border-style: dotted;
+}
+.cch_view_title{
+	color: #000;
+	font-size: 36px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	letter-spacing: initial;
+	z-index: 999998;
+}
+.cch_view_content:hover,
+.cch_view_content:active{
+	cursor: pointer;
+}
+/* MODALS */
+#cch_search_labels_modal_widget,
+#cch_search_configs_modal_widget,
+#cch_about_modal_widget,
+#cch_pageinfo_modal_widget{
+	z-index: 999999;
+	position: fixed;
+	background: #f2f2f2;
+	z-index: 9999999;
+	border: 1px solid grey;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	margin: auto;
+	width: 80%;
+	height: 80%;
+	top: 10%;
+	bottom: 10%;
+	left: 10%;
+    right: 10%;
+}
+#cch_about_modal_widget li,
+#cch_pageinfo_modal_widget li{
+	list-style-position: inside;
+}
+#cch_pageinfo_modal_widget a{
+	text-transform: none;
+	word-break: break-all;
+}
+.cch_input_row{
+	margin: 15px 0;  
+}
+.cch_modal_widget_close_row{
+	margin: 15px 0 0;
+}
+.cch_modal_widget_close{
+	font-weight: bold;
+	font-size: 16px;
+	text-decoration: none;
+}
+.cch_modal_widget_close:hover,
+.cch_modal_widget_close:active,
+.cch_column a:hover,
+.cch_column a:active{
+	color: #982b11;
+	text-decoration: none;
+}
+#cch_search_modal_input{
+	width: 100%;
+}
+#cch_search_modal_table{
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: calc(100% - 130px);
+	border: 1px solid grey;
+}
+.cch_column_header{
+	font-weight: bold;
+	background: #ddd;
+	border: 1px solid gray;
+	cursor: pointer;
+}
+.cch_column{
+	font-size: 14px;
+	color: #000;
+	word-break: break-word;
+}
+.cch_row{
+	background: #FFF;
+	border-top: 1px solid gray;
+}
+.cch_about_row,
+.cch_pageinfo_row{
+	overflow: auto;
+	max-height: calc(100% - 45px);
+}
+.cch_newline{
+	margin-top: 20px;
+}

@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+
+	"name": "CloudCraze Helper",
+	"description": "CloudCraze Helper",
+	"version": "1.0.9",
+
+	"permissions": ["tabs", "<all_urls>"],
+	
+	"content_security_policy": "script-src 'self' 'sha256-fFQBFO8jxe7c0LZgKwWQwboL9lCChbi1gMi+mclDEEs='; object-src 'self'",
+	
+	"content_scripts": [
+	   {
+		 "matches": ["<all_urls>"],
+		 "css": ["css/styles.css"]
+	   }
+	 ],
+	
+    "icons": {
+		"16": "resources/icon.png",
+		"48": "resources/icon.png",
+		"128": "resources/icon.png"
+	},
+	
+	"browser_action": {
+		"default_icon": "resources/icon.png",
+		"default_popup": "popup.html"
+	}
+}
