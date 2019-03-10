@@ -1,7 +1,7 @@
 # CloudCraze Helper - developed by Pawel Dudek
 
-©2018
-Version 1.0.9
+©2019
+Version 1.0.10
 
 
 ## How to use:

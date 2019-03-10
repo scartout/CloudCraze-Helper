@@ -7,8 +7,10 @@ var actualCode = `
 		let content = $('.cch_event');
 
 		if(content.length==0){
+			
+			let dynamicViews = CCRZ.dynamicCustomView ? CCRZ.dynamicCustomView : CCRZ.dynamicViews;
 
-			(CCRZ.dynamicViews).forEach((view, index)=>{
+			dynamicViews.forEach((view, index)=>{
 				if(view.$el.length > 0){
 
 					if(view.events){

@@ -3,7 +3,7 @@
 
 	"name": "CloudCraze Helper",
 	"description": "CloudCraze Helper",
-	"version": "1.0.9",
+	"version": "1.0.10",
 
 	"permissions": ["tabs", "<all_urls>"],
 	

@@ -2,7 +2,7 @@ var actualCode = `
 
 	if(typeof CCRZ !== 'undefined'){
 
-	    let dynamicViews = CCRZ.dynamicViews.filter((view)=>view.$el.length > 0);
+	    let dynamicViews = CCRZ.dynamicCustomView ? CCRZ.dynamicCustomView.filter((view)=>view.$el.length > 0) : CCRZ.dynamicViews.filter((view)=>view.$el.length > 0);
 
 		function closeModal(){
 			$(".cch_modal_widget").remove();
@@ -33,12 +33,14 @@ var actualCode = `
 		else{
 		    closeModal();
 			dynamicViews.forEach((view, index)=>{
-                var viewBox = $( "<span class='cch_view_content' title='Click to render' onclick='CCRZ.dynamicViews["+index+"].render()'><h2 class='cch_view_title'>"+view.viewName+"<h2></span>" );
-                viewBox.css("top",view.$el.position().top);
-                viewBox.css("width",view.$el[0].scrollWidth);
-                viewBox.css("height",view.$el[0].scrollHeight);
-                viewBox.css("left",view.$el.position().left);
-                viewBox.css("background-color",""+getRandomColor()+"88");
+                var viewBox = $( "<span class='cch_view_content'><h2 class='cch_view_title'>"+view.viewName+"<h2></span>" );
+                viewBox.css({
+					"top" : view.$el.position().top,
+					"width" : view.$el[0].scrollWidth,
+					"height" : view.$el[0].scrollHeight,
+					"left" : view.$el.position().left,
+					"background-color" : ""+getRandomColor()+"88"
+				});
                 viewBox.addClass('cch_view_background');
                 view.$el.append(viewBox);
 			})
